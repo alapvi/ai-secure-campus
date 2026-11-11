@@ -102,6 +102,10 @@ Los papeles principales son los siguientes:
 
 Es importante distinguir el diseño concreto del centro de las topologías de referencia: un **manager-search** combina funciones de gestión y búsqueda, mientras que un despliegue a mayor escala podría utilizar nodos de búsqueda separados.
 
+**Panel de observabilidad de Security Onion.** Vista histórica de conexiones y volumen de tráfico. Estas métricas ilustran la monitorización continua y **no corresponden a los PCAP sintéticos PHP2Shell**.
+
+![Panel de Security Onion con conexiones únicas, tráfico y evolución temporal](figuras_ai_secure_campus/security-onion-dashboard.webp)
+
 **Captura real de Security Onion — panel Alerts del laboratorio de validación.** Se muestran cuatro detecciones correspondientes a dos firmas, antes de incorporar las evidencias de Zeek.
 
 ![Security Onion Alerts: cuatro alertas sintéticas PHP2Shell](figuras_ai_secure_campus/security-onion-alertas.png)
@@ -438,6 +442,10 @@ En el segundo PCAP se conserva la fase inicial del laboratorio y se añaden even
 
 El motor de consulta identifica **siete flujos HTTP salientes** además de los tres grupos iniciales. Para la investigación se utilizan distintos Community IDs: **diez agrupaciones de interés en total**. Qwen pudo descubrir los destinos y los dominios desde las herramientas disponibles, sin recibir esas respuestas en el enunciado inicial.
 
+**AI Secure Campus — cronología de investigación.** El asistente reúne intentos PHP2Shell, resoluciones DNS y comunicaciones HTTP en una secuencia verificable. Captura de un **laboratorio sintético**.
+
+![Cronología de investigación de AI Secure Campus con alertas PHP2Shell, DNS y HTTP](figuras_ai_secure_campus/asc-investigacion-cronologia.webp)
+
 ### 14.2 Qué significan las respuestas HTTP
 
 - **403 Forbidden:** respuesta HTTP de denegación observada; no acredita un control preventivo efectivo sin más pruebas.
@@ -452,6 +460,10 @@ La secuencia puede motivar una revisión del servidor y de sus procesos, pero la
 La primera investigación reconstruyó los grupos iniciales y descubrió actividad DNS y conexiones salientes, pero dejó varias transacciones HTTP sin verificar. Una segunda ronda de consultas recuperó las **siete transacciones HTTP salientes**, incluidas las dos respuestas 202, y corrigió expresamente la hipótesis anterior. Este episodio demuestra dos cosas: que la integración es capaz de continuar una investigación con evidencias verificables y que **la exhaustividad del modelo necesita validación**, porque un informe inicial puede ser incompleto aunque los datos existan en Security Onion.
 
 **Veredicto técnico del caso B:** existe actividad posterior sintética confirmada en la telemetría; **no** existe evidencia independiente suficiente para demostrar compromiso o una relación causal entre el patrón PHP2Shell y esas conexiones.
+
+**AI Secure Campus — veredicto y recomendaciones.** El asistente presenta `incident_verdict: not_established`, identifica actividad posterior y propone comprobaciones. La imagen corresponde a la sesión de demostración, no a un compromiso real.
+
+![Veredicto y recomendaciones de AI Secure Campus: compromiso no establecido](figuras_ai_secure_campus/asc-veredicto-analista.webp)
 
 ## 15. Métricas, rendimiento y estado de validación
 
