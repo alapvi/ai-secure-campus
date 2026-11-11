@@ -512,6 +512,48 @@ Per a transferir el projecte a altres centres es pot començar amb un laboratori
 
 La prioritat no és afegir mòduls perquè siguen atractius, sinó millorar **evidència, cobertura, autorització, traçabilitat i utilitat per a l'analista**.
 
+### 20.1 AI Secure Campus 2.0 — Resposta adaptativa governada
+
+> **Línia proposada per a la convocatòria d'innovació 2026–2027. Proposta d'R+D aplicada · No desplegada ni validada.**
+
+La fase següent planteja evolucionar des de la investigació d'incidents amb IA local cap a un SOC educatiu capaç de proposar, autoritzar, executar i verificar contencions delimitades sobre la infraestructura. La seua aportació principal en IA i Big Data és combinar telemetria de Security Onion, correlació contextual, raonament assistit i polítiques verificables d'actuació.
+
+**Detectar → correlacionar → proposar → autoritzar → contindre → verificar → revertir**
+
+#### Full de ruta de desenvolupament
+
+- **01 · Identitat i permisos:** Identitat centralitzada (OIDC), RBAC i regles contextuals per usuari, API, dispositiu, VLAN i operació. Auditoria i separació de lectura/escriptura.
+- **02 · Evidència i decisió:** Correlació d'API-SOC, API-Net i API-Endpoint; identificació fiable de l'equip i el port; propostes de Qwen avaluades per un motor de polítiques independent (OPA com a opció).
+- **03 · Contenció supervisada:** Operacions delimitades i aprovades: quarantena d'un equip, bloqueig temporal d'IP o desactivació d'un port d'accés identificat. Simulació prèvia i registre del canvi.
+- **04 · Automatització limitada:** Pilots de respostes preautoritzades i de baix impacte, amb caducitat, verificació posterior, alertes operatives i reversió; sense autonomia sobre actius crítics.
+
+#### Rols i abast de les accions
+
+Els rols no concedeixen accés indiscriminat: cada permís també depén de l'equip, el segment, el tipus d'operació i el nivell de risc (RBAC + atributs contextuals).
+
+| Rol | Alcance autorizado |
+|---|---|
+| Observador | Consulta limitada d'inventari i alertes autoritzades. |
+| Analista SOC | Investiga evidències i proposa mesures; no modifica la xarxa. |
+| Operador de xarxa | Executa canvis autoritzats sobre switches, VLAN o regles concretes del seu àmbit. |
+| Responsable de seguretat | Aprova contencions sensibles i revisa actuacions i incidents. |
+| Administrador de plataforma | Gestiona identitats i polítiques sense aprovació unilateral de canvis crítics. |
+| Servei automatitzat | Només accions explícitament preautoritzades, d'abast limitat i amb credencials específiques. |
+
+#### Arquitectura de control
+
+Qwen pot recomanar, però mai no disposa de credencials directes d'administració ni executa ordres lliures sobre MikroTik o Cisco. Un servei d'orquestració rep sol·licituds estructurades, consulta la identitat i les polítiques, exigeix aprovacions quan corresponga i utilitza operacions permeses d'API-Net/API-Endpoint. Cada acció registra qui, què, per què, sobre quin actiu, evidència, resultat i reversió.
+
+#### Límits obligatoris abans d'activar l'escriptura
+
+Davant dades incompletes, inventari ambigu, atribució equip–port no verificada o una alerta aïllada sense corroboració, la resposta ha de quedar-se en recomanació. S'exclouen de l'automatització els enllaços troncals, ports de gestió, serveis essencials i canvis generals del tallafoc perimetral; estos últims requereixen un procediment específic d'autorització. Totes les proves comencen en un entorn aïllat, amb validació, finestra de seguretat i pla de recuperació.
+
+#### Com avaluar el resultat de la innovació
+
+Temps des de la detecció fins a la proposta/contenció; qualitat de la correlació i de la identificació equip–port; taxa de contencions falses (objectiu: zero en pilots); percentatge d'accions auditades; temps i èxit de la reversió. Les mètriques es mesuraran amb casos reproduïbles i proves controlades, no es presenten com a resultats assolits.
+
+**Estat d'esta línia: planificació per a la convocatòria 2026–2027. Les capacitats de resposta activa, RBAC/ABAC i execució automàtica descrites ací són objectius de desenvolupament, no funcions operatives actuals.**
+
 ## 21. Preguntes freqüents
 
 ### AI Secure Campus substituïx Security Onion?
