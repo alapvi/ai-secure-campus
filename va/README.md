@@ -94,6 +94,10 @@ La instal·lació utilitza **Security Onion 3.4.0** amb un node **manager-search
 
 Un manager-search combina funcions de gestió i cerca; en instal·lacions majors podrien separar-se en nodes específics.
 
+**Panell d'observabilitat de Security Onion.** Vista històrica de connexions i volum de trànsit. Estes mètriques il·lustren el monitoratge continu i **no corresponen als PCAP sintètics PHP2Shell**.
+
+![Panell de Security Onion amb connexions úniques, trànsit i evolució temporal](../figuras_ai_secure_campus/security-onion-dashboard.webp)
+
 **Captura real de Security Onion — Alerts.** Quatre deteccions sintètiques inicials de PHP2Shell abans d'incorporar les evidències Zeek.
 
 ![Alertes PHP2Shell sintètiques en Security Onion Alerts](../figuras_ai_secure_campus/security-onion-alertas.png)
@@ -387,6 +391,10 @@ Un segon PCAP sintètic conserva les firmes inicials i afig esdeveniments poster
 
 S'identifiquen **set fluxos HTTP salints** a més dels **tres grups entrants**: deu agrupacions de Community ID d'interés. Qwen va descobrir els dominis i les destinacions mitjançant les ferramentes, sense conéixer-los prèviament.
 
+**AI Secure Campus — cronologia d'investigació.** L'assistent reunix intents PHP2Shell, consultes DNS i comunicacions HTTP en una seqüència verificable. Captura d'un **laboratori sintètic**; la interfície es mostra en castellà.
+
+![Cronologia d'investigació d'AI Secure Campus amb alertes PHP2Shell, DNS i HTTP](../figuras_ai_secure_campus/asc-investigacion-cronologia.webp)
+
 ### 14.2 Interpretació de les respostes HTTP
 
 - **403 Forbidden:** s'observa denegació HTTP; el bloqueig preventiu efectiu no queda provat.
@@ -403,6 +411,10 @@ La primera investigació va descobrir DNS i connexions salints, però va deixar 
 La lliçó és doble: la integració permet investigar iterativament amb evidències, però **l'exhaustivitat del model s'ha de validar** encara que totes les dades existisquen en Security Onion.
 
 **Veredicte tècnic:** hi ha activitat posterior sintètica observada, però no prova independent de compromís ni de relació causal amb PHP2Shell.
+
+**AI Secure Campus — veredicte i recomanacions.** L'assistent mostra `incident_verdict: not_established`, identifica activitat posterior i proposa comprovacions. La imatge és d'una sessió de demostració en castellà, no d'un compromís real.
+
+![Veredicte i recomanacions d'AI Secure Campus: compromís no establit](../figuras_ai_secure_campus/asc-veredicto-analista.webp)
 
 ## 15. Mètriques, rendiment i validació
 
