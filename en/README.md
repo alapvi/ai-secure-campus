@@ -512,6 +512,48 @@ A transferable adoption path starts with a small safe laboratory, documented API
 
 The priority is not to add modules for novelty, but to improve **evidence quality, coverage, authorisation, traceability and analyst utility**.
 
+### 20.1 AI Secure Campus 2.0 — Governed adaptive response
+
+> **Proposed workstream for the 2026–2027 innovation call. Applied R&D proposal · Not deployed or validated.**
+
+The next phase aims to move from AI-assisted incident investigation towards an educational SOC able to propose, authorise, execute and verify narrowly scoped containment actions on the infrastructure. Its key AI and Big Data contribution combines Security Onion telemetry, contextual correlation, assisted reasoning and verifiable action policies.
+
+**Detect → correlate → propose → authorise → contain → verify → roll back**
+
+#### Development roadmap
+
+- **01 · Identity and permissions:** Centralised identity (OIDC), RBAC and contextual rules by user, API, device, VLAN and operation. Audit logging and separation of read/write privileges.
+- **02 · Evidence and decision:** Cross-source correlation across API-SOC, API-Net and API-Endpoint; reliable device-to-port attribution; Qwen proposals assessed by an independent policy engine (OPA as an option).
+- **03 · Supervised containment:** Approved, narrowly defined actions: host quarantine, temporary IP blocking or disabling a verified access switch port. Dry-run checks and change logs.
+- **04 · Limited automation:** Trials of pre-authorised low-impact responses, with expiration, outcome verification, operational alerts and rollback; no autonomous actions on critical assets.
+
+#### Roles and action scope
+
+Roles do not grant blanket access: each permission also depends on the device, segment, operation and risk level (RBAC + contextual attributes).
+
+| Rol | Alcance autorizado |
+|---|---|
+| Observer | Limited access to approved inventory and alerts. |
+| SOC analyst | Investigates evidence and recommends actions; cannot change the network. |
+| Network operator | Executes approved changes on scoped switches, VLANs or specific rules. |
+| Security lead | Approves sensitive containment and reviews incidents and actions. |
+| Platform administrator | Manages identities and policies, without unilateral approval of critical changes. |
+| Automation service | Only explicitly pre-authorised, narrowly scoped actions using dedicated credentials. |
+
+#### Control architecture
+
+Qwen may recommend actions but never receives direct administration credentials or executes arbitrary commands on MikroTik or Cisco. An orchestration service accepts structured requests, checks identity and policy, requests approval when required and calls allowlisted API-Net/API-Endpoint operations. Each action logs the actor, operation, reason, asset, evidence, outcome and rollback.
+
+#### Mandatory safeguards before enabling write access
+
+With incomplete evidence, ambiguous inventory, unverified device-to-port attribution or an isolated uncorroborated alert, the system must only recommend an action. Uplinks, management ports, essential services and broad perimeter-firewall changes are excluded from automation; the latter require a dedicated approval procedure. Trials begin in an isolated environment with verification, a safe maintenance window and a recovery plan.
+
+#### How we will evaluate the innovation
+
+Detection-to-proposal/containment time; correlation and device-to-port attribution quality; false containment rate (target: zero during pilots); share of audited actions; rollback time and success. Metrics will be measured in repeatable controlled exercises and are not presented as achieved results.
+
+**Status: proposed for the 2026–2027 call. Active response, RBAC/ABAC and automated execution described here are development goals, not currently operational capabilities.**
+
 ## 21. Frequently asked questions
 
 ### Does AI Secure Campus replace Security Onion?
