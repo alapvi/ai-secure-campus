@@ -583,6 +583,48 @@ También aporta un modelo de transferencia a otros centros: empezar con un labor
 
 La prioridad no es agregar módulos por su atractivo tecnológico, sino fortalecer **evidencia, cobertura, autorización, trazabilidad y utilidad real del analista**.
 
+### 20.1 AI Secure Campus 2.0 — Respuesta adaptativa gobernada
+
+> **Línea propuesta para la convocatoria de innovación 2026–2027. Propuesta de I+D aplicada · No desplegada ni validada.**
+
+La siguiente fase plantea evolucionar desde la investigación de incidentes con IA local hacia un SOC educativo capaz de proponer, autorizar, ejecutar y verificar contenciones acotadas sobre la infraestructura. Su aportación principal en IA y Big Data es combinar telemetría de Security Onion, correlación contextual, razonamiento asistido y políticas verificables de actuación.
+
+**Detectar → correlacionar → proponer → autorizar → contener → verificar → revertir**
+
+#### Roadmap de desarrollo
+
+- **01 · Identidad y permisos:** Identidad centralizada (OIDC), RBAC y reglas contextuales por usuario, API, dispositivo, VLAN y operación. Auditoría y separación de lectura/escritura.
+- **02 · Evidencia y decisión:** Correlación de API-SOC, API-Net y API-Endpoint; identificación fiable de equipo y puerto; propuestas de Qwen evaluadas por un motor de políticas independiente (OPA como opción).
+- **03 · Contención supervisada:** Operaciones tasadas y aprobadas: cuarentena de un equipo, bloqueo temporal de IP o deshabilitación de un puerto de acceso identificado. Simulación previa y registro del cambio.
+- **04 · Automatización limitada:** Pilotos de respuestas preautorizadas y de bajo impacto, con caducidad, verificación posterior, alertas operativas y reversión; sin autonomía sobre activos críticos.
+
+#### Roles y alcance de las acciones
+
+Los roles no conceden acceso indiscriminado: cada permiso también depende del equipo, segmento, tipo de operación y nivel de riesgo (RBAC + atributos contextuales).
+
+| Rol | Alcance autorizado |
+|---|---|
+| Observador | Consulta limitada de inventario y alertas autorizadas. |
+| Analista SOC | Investiga evidencias y propone medidas; no modifica la red. |
+| Operador de red | Ejecuta cambios autorizados sobre switches, VLAN o reglas concretas de su ámbito. |
+| Responsable de seguridad | Aprueba contenciones sensibles y revisa actuaciones e incidentes. |
+| Administrador de plataforma | Gestiona identidades y políticas sin aprobación unilateral de cambios críticos. |
+| Servicio automatizado | Solo acciones explícitamente preautorizadas, de alcance limitado y con credenciales específicas. |
+
+#### Arquitectura de control
+
+Qwen puede recomendar, pero nunca dispone de credenciales directas de administración ni ejecuta comandos libres sobre MikroTik o Cisco. Un servicio de orquestación recibe solicitudes estructuradas, consulta identidad y políticas, exige aprobaciones cuando corresponda y utiliza operaciones permitidas de API-Net/API-Endpoint. Cada acción guarda quién, qué, por qué, sobre qué activo, evidencia, resultado y reversión.
+
+#### Límites obligatorios antes de activar escritura
+
+Ante datos incompletos, inventario ambiguo, atribución equipo–puerto no verificada o una alerta aislada sin corroboración, la respuesta debe quedarse en recomendación. Se excluyen de la automatización los enlaces troncales, puertos de gestión, servicios esenciales y cambios generales del firewall perimetral; estos últimos requieren un procedimiento específico de autorización. Toda prueba empieza en un entorno aislado, con validación, ventana de seguridad y plan de recuperación.
+
+#### Cómo evaluar el resultado de la innovación
+
+Tiempo desde la detección hasta la propuesta/contención; calidad de la correlación y de la identificación equipo–puerto; tasa de falsas contenciones (objetivo: cero en pilotos); porcentaje de acciones auditadas; tiempo y éxito de la reversión. Las métricas se medirán con casos reproducibles y pruebas controladas, no se presentan como resultados alcanzados.
+
+**Estado de esta línea: planificación para la convocatoria 2026–2027. Las capacidades de respuesta activa, RBAC/ABAC y ejecución automática descritas aquí son objetivos de desarrollo, no funciones operativas actuales.**
+
 ## 21. Preguntas frecuentes
 
 ### ¿AI Secure Campus sustituye a Security Onion?
