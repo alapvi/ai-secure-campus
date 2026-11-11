@@ -1,5 +1,7 @@
 # AI Secure Campus
 
+> **Idiomas / Languages:** **Español** · [Valencià](va/README.md) · [English](en/README.md) · [Web en valencià](va/index.html) · [English website](en/index.html)
+
 > **Documentación web:** [Abrir el archivo HTML autocontenido](index.html). Para visualizarlo como sitio web, configurar **GitHub Pages** con la rama `main` y la carpeta `/ (root)`. El contenido técnico completo está disponible a continuación en Markdown.
 
 ---
