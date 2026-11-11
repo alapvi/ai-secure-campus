@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="450" viewBox="0 0 980 450" role="img" aria-label="Escenario PHP2Shell: 8 alertas Suricata y 17 eventos Zeek, agrupados en tres Community IDs">
+ <rect width="980" height="450" rx="28" fill="#edf6fa"/>
+ <text x="50" y="62" fill="#173851" font-family="Arial, sans-serif" font-size="29" font-weight="bold">AI Secure Campus · evidencias correlacionadas</text>
+ <text x="50" y="100" fill="#536e83" font-family="Arial, sans-serif" font-size="18">Laboratorio PHP2Shell · 3 Community IDs · 25 documentos únicos</text>
+ <rect x="46" y="143" width="885" height="84" rx="14" fill="#ffffff"/>
+ <text x="66" y="177" fill="#1b435f" font-size="19" font-family="Arial, sans-serif" font-weight="bold">Suricata</text>
+ <text x="64" y="201" fill="#60778d" font-size="14" font-family="Arial, sans-serif">8 alertas</text>
+ <rect x="235" y="173" width="262" height="23" rx="11" fill="#16729b"/>
+ <text x="518" y="190" fill="#0d5574" font-size="17" font-family="Arial, sans-serif">8 / 25</text>
+ <rect x="46" y="249" width="885" height="84" rx="14" fill="#ffffff"/>
+ <text x="66" y="285" fill="#1b435f" font-size="19" font-family="Arial, sans-serif" font-weight="bold">Zeek</text>
+ <text x="64" y="309" fill="#60778d" font-size="14" font-family="Arial, sans-serif">17 eventos</text>
+ <rect x="235" y="279" width="556" height="23" rx="11" fill="#05a39e"/>
+ <text x="811" y="297" fill="#0d5574" font-size="17" font-family="Arial, sans-serif">17 / 25</text>
+ <text x="50" y="390" fill="#49677f" font-size="16" font-family="Arial, sans-serif">Zeek: 3 conn · 4 http · 10 file</text>
+ <text x="50" y="417" fill="#6b8394" font-size="14" font-family="Arial, sans-serif">Gráfico elaborado con datos verificados del laboratorio sintético; no representa toda la red.</text>
+ </svg>
