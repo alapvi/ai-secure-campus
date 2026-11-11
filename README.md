@@ -1,5 +1,9 @@
 # AI Secure Campus
 
+> **Documentación web:** [Abrir el archivo HTML autocontenido](index.html). Para visualizarlo como sitio web, configurar **GitHub Pages** con la rama `main` y la carpeta `/ (root)`. El contenido técnico completo está disponible a continuación en Markdown.
+
+---
+
 **Ciberseguridad, inteligencia artificial local e investigación de incidentes basada en evidencias**
 
 *Proyecto de Excelencia en Inteligencia Artificial y Big Data · IES Doctor Lluís Simarro (Xàtiva) · PP3.2 — Proyecto de innovación*  
