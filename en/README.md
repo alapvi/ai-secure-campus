@@ -94,6 +94,10 @@ The installation uses **Security Onion 3.4.0** in a distributed arrangement: one
 
 A manager-search combines management and search responsibilities; larger deployments may separate them across dedicated nodes.
 
+**Security Onion observability dashboard.** Historical overview of unique connections and network traffic volume. The figures illustrate continuous monitoring and **are not metrics from the synthetic PHP2Shell PCAPs**.
+
+![Security Onion dashboard showing unique connections, traffic volume and trends](../figuras_ai_secure_campus/security-onion-dashboard.webp)
+
 **Real Security Onion screenshot — Alerts.** Four initial synthetic PHP2Shell detections, before retrieving the related Zeek evidence.
 
 ![Security Onion Alerts showing synthetic PHP2Shell detections](../figuras_ai_secure_campus/security-onion-alertas.png)
@@ -387,6 +391,10 @@ A second synthetic PCAP retains the initial signatures and adds subsequent event
 
 The investigation identified **seven outbound HTTP flows**, in addition to the **three incoming groups**: ten Community ID groups of interest. Qwen discovered the destinations and domains through tools without being told them in advance.
 
+**AI Secure Campus — investigation timeline.** The assistant combines PHP2Shell attempts, DNS queries and HTTP traffic into a traceable chronology. This is a **synthetic laboratory** screenshot; the interface shown is in Spanish.
+
+![AI Secure Campus investigation timeline with PHP2Shell alerts, DNS and HTTP](../figuras_ai_secure_campus/asc-investigacion-cronologia.webp)
+
 ### 14.2 Interpreting HTTP responses
 
 - **403 Forbidden:** a refusal response was observed; effective prevention is not proven.
@@ -403,6 +411,10 @@ The initial investigation discovered DNS and outgoing connections but left some 
 The lesson is twofold: the integration supports iterative, evidence-backed analysis, and **model completeness needs validation** even when the source platform has all the records.
 
 **Technical verdict:** synthetic later activity is present; no independent evidence proves host compromise or causation by PHP2Shell.
+
+**AI Secure Campus — verdict and recommendations.** The assistant reports `incident_verdict: not_established`, describes later activity and proposes follow-up checks. The screenshot shows a demonstration in Spanish, not a real confirmed compromise.
+
+![AI Secure Campus verdict and recommendations: compromise not established](../figuras_ai_secure_campus/asc-veredicto-analista.webp)
 
 ## 15. Performance and validation
 
