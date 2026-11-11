@@ -102,6 +102,18 @@ A manager-search combines management and search responsibilities; larger deploym
 
 ![Security Onion Alerts showing synthetic PHP2Shell detections](../figuras_ai_secure_campus/security-onion-alertas.png)
 
+#### Campus network traffic visualisations
+
+These screenshots illustrate two complementary views of the school's network observability: a map of geolocated destinations and a custom Kibana dashboard. They are static snapshots from operational panels, not live-updating data on this page. IP geolocation is approximate, and frequent destinations do not in themselves indicate malicious activity.
+
+![Map of the school's connection destinations using geographical event aggregation. Screenshot of a dynamic panel; the image published here is not live. The internal Elasticsearch endpoint has been removed.](../figuras_ai_secure_campus/asc-mapa-destinos-globales.webp)
+
+*Map of the school's connection destinations using geographical event aggregation. Screenshot of a dynamic panel; the image published here is not live. The internal Elasticsearch endpoint has been removed.*
+
+![Custom Kibana dashboard: connection trends, distribution by country, source hosts and destination ports. Private IP addresses in the legend have been anonymised for public documentation.](../figuras_ai_secure_campus/asc-kibana-conexiones.webp)
+
+*Custom Kibana dashboard: connection trends, distribution by country, source hosts and destination ports. Private IP addresses in the legend have been anonymised for public documentation.*
+
 ### 5.3 Layer 3: specialised API services
 
 These services form a **controlled investigation gateway** between evidence systems and AI clients:

@@ -110,6 +110,18 @@ Es importante distinguir el diseño concreto del centro de las topologías de re
 
 ![Security Onion Alerts: cuatro alertas sintéticas PHP2Shell](figuras_ai_secure_campus/security-onion-alertas.png)
 
+#### Visualizaciones de tráfico del campus
+
+Estas capturas muestran dos vistas complementarias de la observabilidad de red del IES: un mapa de destinos geolocalizados y un dashboard personalizado de Kibana. Son imágenes estáticas tomadas de paneles operativos, no información actualizada en directo en esta página. La geolocalización de IP es aproximada y un destino frecuente no implica por sí mismo actividad maliciosa.
+
+![Mapa de destinos de conexiones del IES con agregación geográfica de eventos. Captura de un panel dinámico; la imagen publicada no se actualiza en tiempo real. Se ha retirado el endpoint interno de Elasticsearch.](figuras_ai_secure_campus/asc-mapa-destinos-globales.webp)
+
+*Mapa de destinos de conexiones del IES con agregación geográfica de eventos. Captura de un panel dinámico; la imagen publicada no se actualiza en tiempo real. Se ha retirado el endpoint interno de Elasticsearch.*
+
+![Dashboard personalizado en Kibana: evolución temporal de conexiones, distribución por países, equipos de origen y puertos de destino. Las direcciones privadas de la leyenda se han anonimizado para la documentación pública.](figuras_ai_secure_campus/asc-kibana-conexiones.webp)
+
+*Dashboard personalizado en Kibana: evolución temporal de conexiones, distribución por países, equipos de origen y puertos de destino. Las direcciones privadas de la leyenda se han anonimizado para la documentación pública.*
+
 ### 5.3 Capa 3: servicios API especializados
 
 Las API actúan como **pasarela de investigación** para los clientes y las herramientas de IA. La separación es lógica y de despliegue:

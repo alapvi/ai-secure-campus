@@ -102,6 +102,18 @@ Un manager-search combina funcions de gestió i cerca; en instal·lacions majors
 
 ![Alertes PHP2Shell sintètiques en Security Onion Alerts](../figuras_ai_secure_campus/security-onion-alertas.png)
 
+#### Visualitzacions del trànsit del campus
+
+Estes captures mostren dues perspectives complementàries de l'observabilitat de xarxa de l'IES: un mapa de destinacions geolocalitzades i un quadre de comandament personalitzat de Kibana. Són imatges estàtiques de panells operatius, no informació actualitzada en directe en esta pàgina. La geolocalització de les IP és aproximada i una destinació freqüent no implica per si mateixa activitat maliciosa.
+
+![Mapa de destinacions de les connexions de l'IES amb agregació geogràfica d'esdeveniments. Captura d'un panell dinàmic; la imatge publicada no s'actualitza en temps real. S'ha retirat l'endpoint intern d'Elasticsearch.](../figuras_ai_secure_campus/asc-mapa-destinos-globales.webp)
+
+*Mapa de destinacions de les connexions de l'IES amb agregació geogràfica d'esdeveniments. Captura d'un panell dinàmic; la imatge publicada no s'actualitza en temps real. S'ha retirat l'endpoint intern d'Elasticsearch.*
+
+![Quadre de comandament personalitzat en Kibana: evolució temporal de connexions, distribució per països, equips d'origen i ports de destinació. Les adreces privades de la llegenda s'han anonimitzat per a la documentació pública.](../figuras_ai_secure_campus/asc-kibana-conexiones.webp)
+
+*Quadre de comandament personalitzat en Kibana: evolució temporal de connexions, distribució per països, equips d'origen i ports de destinació. Les adreces privades de la llegenda s'han anonimitzat per a la documentació pública.*
+
 ### 5.3 Capa 3: servicis API especialitzats
 
 Les API formen una **passarel·la d'investigació controlada** entre els sistemes d'evidències i els clients d'IA:
