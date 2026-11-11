@@ -1,5 +1,7 @@
 # AI Secure Campus
 
+> **Idiomes:** [Español](../README.md) · **Valencià** · [English](../en/README.md) · [Obrir la web en valencià](./index.html)
+
 **Ciberseguretat, intel·ligència artificial local i investigació d'incidents basada en evidències**
 
 *Centre d'Excel·lència en Intel·ligència Artificial i Big Data · IES Doctor Lluís Simarro (Xàtiva) · PP3.2 — Projecte d'innovació*  
@@ -94,7 +96,7 @@ Un manager-search combina funcions de gestió i cerca; en instal·lacions majors
 
 **Captura real de Security Onion — Alerts.** Quatre deteccions sintètiques inicials de PHP2Shell abans d'incorporar les evidències Zeek.
 
-![Alertes PHP2Shell sintètiques en Security Onion Alerts](figuras_ai_secure_campus/security-onion-alertas.png)
+![Alertes PHP2Shell sintètiques en Security Onion Alerts](../figuras_ai_secure_campus/security-onion-alertas.png)
 
 ### 5.3 Capa 3: servicis API especialitzats
 
@@ -188,7 +190,7 @@ Un mòdul Python compartit avalua prefixos, termes significatius i regles de pri
 
 **Captura de Security Onion Hunt.** La correlació reunix registres diferents de Suricata i Zeek relacionats amb un flux observat.
 
-![Security Onion Hunt amb registres Suricata i Zeek](figuras_ai_secure_campus/security-onion-hunt.png)
+![Security Onion Hunt amb registres Suricata i Zeek](../figuras_ai_secure_campus/security-onion-hunt.png)
 
 ### 7.5 Correlació ampliada i resposta optimitzada per a la IA
 
@@ -406,7 +408,7 @@ La lliçó és doble: la integració permet investigar iterativament amb evidèn
 
 **Representació de les evidències.** El gràfic prové dels resultats validats del laboratori sintètic i no és una captura de la interfície de l'assistent.
 
-![AI Secure Campus: 8 alertes Suricata i 17 esdeveniments Zeek](figuras_ai_secure_campus/ai-secure-campus-evidencias.svg)
+![AI Secure Campus: 8 alertes Suricata i 17 esdeveniments Zeek](../figuras_ai_secure_campus/ai-secure-campus-evidencias.svg)
 
 Les xifres corresponen a **proves concretes**, no a garanties de rendiment per a qualsevol càrrega.
 
